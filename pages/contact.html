@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <title>Contact Avid Colors</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                    <li><a href="../index.html">H O M E</a></li>
+                    <li><a href="about.html">A B O U T</a></li>
+                    <li><a href="contact.html">C O N T A C T</a></li>
+                    <li><a href="gallery.html">G A L L E R Y</a></li>
+                    <li><a href="registration.html">R E G I S T R A T I O N</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Contact Avid Colors</h1>
+            <p>If you have any questions or concerns, feel free to reach out to us using the contact form below.</p>
+        </section>
+        <section class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="logo">A V I D<br>C O L O R S</p>
+        <p class="footer-content">Avid Colors is a website where you can find colorful products and a walkthrough on color theory. Here, each page has their own benefits, and it's up to you whether or not you want to go through each and every one of them.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFEF2;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #374f2f;
+}
+
+nav li {
+    flex-grow: 1;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #0e380e;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-l, .img-r, .img-c {
+    width: 25%;
+    transition: transform 0.3s ease;
+}
+
+.img-l {
+    float: left;
+    transform: scaleX(-1) scaleY(1.3) translateY(14%);
+}
+
+.img-r {
+    float: right;
+    transform: translateX(8%);
+}
+
+.img-c {
+    display: block;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    opacity: 0.8;
+}
+
+.center-img:hover .img-c {
+    transform: scale(1.05);
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Garamond', serif;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+.text-center {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.text-center:hover {
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Garamond', serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+a{
+    color: #cacd32;
+    text-decoration: none;
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .img-l, .img-r {
+        display: none;
+    }
+
+    .img-c {
+        max-width: 80%;
+    }
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+    }
+      
+    nav li {
+      width: 100%;
+    }
+      
+    nav li a {
+      padding: 10px;
+    }
+    .registration form {
+    grid-template-columns: 1fr;
+    }
+}
+
+/* Gallery Section */
+header h1 {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.01);
+}
+
+/* Registration page */
+.registration {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.registration form {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, 480px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.registration h2 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group:nth-child(even) input {
+    grid-column: 2;
+}
+
+.form-group input {
+    width: 97%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #374f2f;
+}
+
+.form-group input[type="submit"] {
+    grid-column: 2;
+    width:100%;
+    background-color: #374f2f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0e380e;
+}
+
+.newsletter-container {
+    display: grid;
+    grid-template-columns: 45% auto 45%;
+}
+
+#newsletter {
+    width: 100%;
+    grid-column: 2;
+}
+
+#checkbox {
+    width: fit-content;
+    grid-column: 1;
+}
+
+/*About page*/
+.intro {
+    background-color: #374f2f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+    font-family: Garamond;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+    padding: 20px;
+    font-family: Garamond;
+}
+
+.content img {
+    width: 10%;
+    border-radius: 4px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.form-group input[type="submit"] {
+    grid-column: 2;
+    width: 100%;
+    background-color: #374f2f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0e380e;
+}
+
+/*References page*/
+.references {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+}
+
+.references ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.references li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-indent: -22px;
+    padding-left: 22px;
+}
